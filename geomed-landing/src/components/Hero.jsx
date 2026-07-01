@@ -78,12 +78,7 @@ export default function Hero() {
       </svg>
 
       {/* Main content */}
-      <div ref={containerRef} className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary-500/30 bg-primary-500/10 text-primary-300 text-sm font-medium mb-8">
-          <span className="w-2 h-2 rounded-full bg-accent-400 animate-pulse" />
-          Plataforma de Geo-Inteligencia para Medellín
-        </div>
+      <div ref={containerRef} className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center -mb-10">
 
         {/* Headline */}
         <h1 className="section-title mb-6">

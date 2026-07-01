@@ -29,8 +29,8 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'py-3 bg-dark-950/80 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/20'
-          : 'py-5 bg-transparent'
+          ? 'py-3 bg-white/95 backdrop-blur-xl border-b border-dark-200 shadow-lg shadow-black/5'
+          : 'py-5 bg-white border-b border-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -39,8 +39,7 @@ export default function Navbar() {
           <img
             src="/logo.png"
             alt="GeoMed Intelligence"
-            className="h-24 w-auto transition-transform duration-300 group-hover:scale-105"
-            style={{ mixBlendMode: 'screen' }}
+            className="h-24 w-auto transition-transform duration-300 group-hover:scale-105 drop-shadow-sm"
           />
         </a>
 
@@ -53,8 +52,8 @@ export default function Navbar() {
               onClick={() => handleNav(link.href)}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                 active === link.href
-                  ? 'text-white bg-primary-600/20 border border-primary-500/30'
-                  : 'text-dark-300 hover:text-white hover:bg-white/5'
+                  ? 'text-primary-700 bg-primary-50 border border-primary-200'
+                  : 'text-dark-600 hover:text-primary-600 hover:bg-dark-50'
               }`}
             >
               {link.label}
@@ -75,7 +74,7 @@ export default function Navbar() {
         {/* Mobile menu toggle */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden p-2 rounded-lg text-dark-300 hover:text-white hover:bg-white/5 transition-all"
+          className="md:hidden p-2 rounded-lg text-dark-600 hover:text-primary-600 hover:bg-dark-50 transition-all"
         >
           {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
@@ -87,13 +86,13 @@ export default function Navbar() {
           menuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="px-4 pt-2 pb-4 bg-dark-950/95 backdrop-blur-xl border-t border-white/10">
+        <div className="px-4 pt-2 pb-4 bg-white/95 backdrop-blur-xl border-t border-dark-200">
           {navLinks.map(link => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => handleNav(link.href)}
-              className="block px-4 py-3 rounded-lg text-sm font-medium text-dark-300 hover:text-white hover:bg-white/5 transition-all mb-1"
+              className="block px-4 py-3 rounded-lg text-sm font-medium text-dark-600 hover:text-primary-600 hover:bg-dark-50 transition-all mb-1"
             >
               {link.label}
             </a>
